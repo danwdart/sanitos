@@ -1,4 +1,0 @@
-devtmpfs /dev devtmpfs noatime 0 0
-sysfs /sys sysfs noatime 0 0
-proc /proc proc noatime 0 0
-tmpfs /tmp tmpfs noatime 0 0

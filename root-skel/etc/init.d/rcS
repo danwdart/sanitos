@@ -1,8 +1,0 @@
-#!/bin/sh
-PATH=/bin:/sbin
-echo Welcome to SanitOS
-#/sbin/syslogd
-/bin/mount -a
-/bin/hostname sanitos
-/bin/ifup -a
-clear
