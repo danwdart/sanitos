@@ -1,0 +1,86 @@
+version: '2'
+services:
+  xorg:
+    image: dandart/xorg
+    privileged: true
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  kde:
+    depends_on:
+      - xorg
+    image: kdeneon/plasma
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  atom:
+    depends_on:
+      - xorg
+    image: jess/atom
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  audacity:
+    depends_on:
+      - xorg
+    image: jess/audacity
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  chrome:
+    depends_on:
+      - xorg
+    image: jess/chrome
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  gimp:
+    depends_on:
+      - xorg
+    image: jess/gimp
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  inkscape:
+    depends_on:
+      - xorg
+    image: jess/inkscape
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  nmap:
+    image: jess/nmap
+
+  tor:
+    image: jess/tor
+
+  virtualbox:
+    depends_on:
+      - xorg
+    image: jess/virtualbox
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  vscode:
+    depends_on:
+      - xorg
+    image: jess/vscode
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+
+  wine:
+    depends_on:
+      - xorg
+    image: jess/wine
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+    
+  wireshark:
+    depends_on:
+      - xorg
+    image: jess/wireshark
+    volumes:
+      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
+  
+  git:
+    image: alpine/git
