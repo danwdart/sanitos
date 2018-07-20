@@ -1,4 +1,4 @@
-FROM ubuntu:artful as ubuntu-build
+FROM ubuntu:bionic as ubuntu-build
 RUN DEBIAN_FRONTEND=noninteractive \
   apt update && \
   DEBIAN_FRONTEND=noninteractive \
