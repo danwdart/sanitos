@@ -13,13 +13,6 @@ services:
     volumes:
       - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
 
-  atom:
-    depends_on:
-      - xorg
-    image: jess/atom
-    volumes:
-      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
-
   audacity:
     depends_on:
       - xorg
@@ -53,13 +46,6 @@ services:
 
   tor:
     image: jess/tor
-
-  virtualbox:
-    depends_on:
-      - xorg
-    image: jess/virtualbox
-    volumes:
-      - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
 
   vscode:
     depends_on:
