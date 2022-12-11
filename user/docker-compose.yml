@@ -60,13 +60,13 @@ services:
     image: jess/wine
     volumes:
       - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
-    
+
   wireshark:
     depends_on:
       - xorg
     image: jess/wireshark
     volumes:
       - /tmp/.X11-unix/X1:/tmp/.X11-unix/X0
-  
+
   git:
     image: alpine/git
